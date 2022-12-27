@@ -1,0 +1,17 @@
+<%= form_with(model: maintenance) do |form| %>
+  <% if maintenance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(maintenance.errors.count, "error") %> prohibited this maintenance from being saved:</h2>
+
+      <ul>
+        <% maintenance.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

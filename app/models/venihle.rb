@@ -1,0 +1,2 @@
+class Venihle < ApplicationRecord
+end

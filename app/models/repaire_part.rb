@@ -1,0 +1,2 @@
+class RepairePart < ApplicationRecord
+end

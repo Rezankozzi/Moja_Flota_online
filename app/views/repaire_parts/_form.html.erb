@@ -1,0 +1,17 @@
+<%= form_with(model: repaire_part) do |form| %>
+  <% if repaire_part.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repaire_part.errors.count, "error") %> prohibited this repaire_part from being saved:</h2>
+
+      <ul>
+        <% repaire_part.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
