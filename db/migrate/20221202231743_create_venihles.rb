@@ -1,10 +1,11 @@
 class CreateVenihles < ActiveRecord::Migration[6.1]
   def change
     create_table :venihles do |t|
-      t.string :catagory, :producent, :license_plate, :vin
-      t.integer :year
+      t.string :type, :make, :license_plate, :vin, :inspection
+      t.integer :year, null: false
+      t.references :insurance_policy, foreign_key: true
 
-      t.datetime :waznosc_badanie_techniczne, :waznosc_ubespeczenie
+      t.timestamps
     end
   end
 end
