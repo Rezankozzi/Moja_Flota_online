@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_02_223524) do
+ActiveRecord::Schema.define(version: 2023_02_07_222248) do
 
   create_table "insurance_policies", force: :cascade do |t|
     t.string "insurer"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2023_01_02_223524) do
   end
 
   create_table "venihles", force: :cascade do |t|
-    t.string "type"
+    t.string "venihle_type"
     t.string "make"
     t.string "license_plate"
     t.string "vin"

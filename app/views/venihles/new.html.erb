@@ -1,5 +1,8 @@
-<h1>New Venihle</h1>
-
-<%= render 'form', venihle: @venihle %>
-
-<%= link_to 'Back', venihles_path %>
+<%= form_with model: @venihle do |form| %>
+  <p>license_plate: <%= form.text_field :license_plate %></p>
+  <p>vin: <%= form.text_field :vin %></p>
+  <p>type: <%= form.select :venihle_type, ["Trailer", "Truck", "Car", 'Tractor', 'forklift truck'] %></p>
+  <p>make: <%= form.select :make, ["Scania", "Man", "Daf"] %></p>
+  <p>year: <%= form.select :year, (2000..2023) %></p>
+  <p><%= form.submit %></p>
+<% end %>

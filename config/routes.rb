@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  resources :reminders
-  resources :repaire_parts
-  resources :services
-  resources :users
-  resources :venihles
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # root '/app/public/Hermespol'
+  resources :venihles do
+    resources :services
+  end
 end
