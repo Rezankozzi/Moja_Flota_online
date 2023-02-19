@@ -1,25 +1,19 @@
 class ServicesController < ApplicationController
-  before_action :set_maintenance, only: %i[ show edit update destroy ]
+  before_action :set_maintenance, only: %i[show edit update destroy]
 
-  # GET /services or /services.json
   def index
     @services = Service.all
   end
 
-  # GET /services/1 or /services/1.json
-  def show
-  end
+  def show; end
 
-  # GET /services/new
   def new
     @service = Service.new
   end
 
-  # GET /services/1/edit
   def edit
   end
 
-  # POST /services or /services.json
   def create
     @service = Service.new(maintenance_params)
 

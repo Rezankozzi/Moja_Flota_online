@@ -3,7 +3,9 @@
 class VenihlesController < ApplicationController
   before_action :set_venihle, only: %i[show edit update destroy]
 
-  def index; end
+  def index
+    @venihles = Venihle.all
+  end
 
   def show; end
 

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # root '/app/public/Hermespol'
+  root 'users#start'
   resources :venihles do
     resources :services
   end
